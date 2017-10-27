@@ -1,2 +1,2 @@
-# search-auto-complete
+# typeahead
 Application for autocompleting search terms.
