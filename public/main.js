@@ -4,6 +4,12 @@ async function elements() {
 }
 
 const periodicTable = []
-elements().then(data => {
-  console.log(data)
-})
+elements()
+  .then(data =>
+    data.forEach(element => {
+      periodicTable.push(element)
+    })
+  )
+  .catch(error => console.log(error))
+
+console.log(periodicTable)
