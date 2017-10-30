@@ -29,19 +29,25 @@ const renderResults = string => {
       ) {
         const $results = document.createElement('div')
         $results.classList.add('suggestions')
-        $results.textContent = element.name + ' ' + element.symbol
+        $results.textContent = element.name + ', ' + element.symbol
         $dropDown.appendChild($results)
       }
     })
   }
 }
-let accumulator = ''
+
+let current = document.querySelector('input').value
 
 $search.addEventListener('keydown', event => {
-  if (event.key === 'Backspace') {
-    accumulator = accumulator.substr(0, accumulator.length - 1)
+  if (event.keyCode > 36 && event.keyCode < 41) {
+    return
+  } else if (event.keyCode == 8) {
+    current = current.substring(0, current.length - 1)
   } else {
-    accumulator += event.key
+    current += event.key
   }
-  renderResults(accumulator)
+  console.log(current)
+  renderResults(current)
 })
+
+const selected = string => {}
