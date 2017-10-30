@@ -38,15 +38,8 @@ const renderResults = string => {
 
 let current = document.querySelector('input').value
 
-$search.addEventListener('keydown', event => {
-  if (event.keyCode > 36 && event.keyCode < 41) {
-    return
-  } else if (event.keyCode == 8) {
-    current = current.substring(0, current.length - 1)
-  } else {
-    current += event.key
-  }
-  console.log(current)
+$search.addEventListener('keyup', event => {
+  let current = document.querySelector('input').value
   renderResults(current)
 })
 

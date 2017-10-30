@@ -25,6 +25,7 @@ input {
   font-size: 1.02rem;
   width: 100%;
   max-width: 600px;
+  padding-left: 0.25rem;
 }
 
 #dropDown {
@@ -35,10 +36,11 @@ input {
 }
 
 .suggestions {
-  width: 100%;
+  width: 99%;
   text-align: left;
   font-size: 1rem;
   background-color: #fefffe;
   border-left: 1px #eee solid;
   border-right: 1px #eee solid;
+  padding-left: 0.25rem;
 }
