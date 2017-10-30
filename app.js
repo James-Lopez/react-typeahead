@@ -2,7 +2,7 @@ const express = require('express')
 const { MongoClient } = require('mongodb')
 const app = express()
 
-MongoClient.connect('mongodb://localhost/clock', (error, db) => {
+MongoClient.connect('mongodb://localhost/typeahead', (error, db) => {
   app.use(express.static('./public'))
   const elements = db.collection('elements')
 
