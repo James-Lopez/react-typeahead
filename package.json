@@ -1,0 +1,28 @@
+{
+  "name": "typeahead",
+  "version": "1.0.0",
+  "description": "Application for autocompleting search terms.",
+  "main": "app.js",
+  "scripts": {
+    "watch": "nodemon",
+    "seed": "node seed.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/James-Lopez/typeahead.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/James-Lopez/typeahead/issues"
+  },
+  "homepage": "https://github.com/James-Lopez/typeahead#readme",
+  "devDependencies": {
+    "nodemon": "^1.12.1"
+  },
+  "dependencies": {
+    "express": "^4.16.2",
+    "mongodb": "^2.2.33"
+  }
+}
