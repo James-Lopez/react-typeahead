@@ -3,7 +3,7 @@ const { MongoClient } = require('mongodb')
 const app = express()
 
 MongoClient.connect('mongodb://localhost/typeahead', (error, db) => {
-  app.use(express.static('./public'))
+  app.use(express.static('./server/public'))
   const elements = db.collection('elements')
 
   app.get('/elements', (req, res) => {
@@ -17,5 +17,5 @@ MongoClient.connect('mongodb://localhost/typeahead', (error, db) => {
       })
   })
 
-  app.listen(1337, console.log('Open on port 1337'))
+  app.listen(3000, console.log('Open on port 3000'))
 })
